@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+         function form() {
+
+             var FullName = document.getElementById("fname");
+             var Email = document.getElementById("email");
+             var Password = document.getElementById("pw");
+             var Comment = document.getElementById("com");
+
+
+             if (FullName.value == "" || Email.value == "" || Password.value == "" || Comment.value== "") {
+                 alert("no blank values allowed");
+                 return false;
+             }
+             else {          
+                 return true;
+
+             }
+         }
+    </script>
+</head>
+<body>
+<!--form classes--->
+
+<form  onsubmit="return form()" action="grid.html" class="bg-success p-5 m-5">
+    <div    class="form-floating mt-3 mb-3">
+    <input type="text"  id="fname" class="form-control" placeholder="Fullname">
+         <label for="fname"  class="form-label">Full Name:</label>
+    </div>
+    <div    class="form-floating mb-3">
+    <input type="email" id="email"  class="form-control" placeholder="email">
+        <label for="email" class="form-label">Email:</label>
+    </div>
+    <div    class="form-floating mb-3">
+
+    <input type="password"  id="pw"class="form-control" placeholder="password">
+         <label for="pw" class="form-label">Password:</label>
+    </div>
+    <div class="mb-3">
+    <label for="com"class="form-label">Comments:</label>
+    <textarea name="comments" id="com" cols="15" rows="3"class="form-control"></textarea>
+    </div>
+
+<div class="mb-3">
+
+    <label for="language" class="form-label">Programming Languages</label>
+    <input type="text" id="language" class="form-control" list="languages">
+    <datalist   id="languages">
+        <option value="Pyton">
+        <option value="Java">
+        <option value="Kotlin">
+    </datalist>
+</div>
+
+     <button    type="submit">Submit</button>
+</form>
+
+<br><br>
+<!---input fields side by side--->
+
+<form action=""class="bg-info p-3">
+<div class="row">
+    <div class="col">
+        <input type="text"  id="fulname"    placeholder="Firstname" class="form-control">
+    </div>
+    <div class="col">
+        <input type="text" id="lname" placeholder="LastName" class="form-control">
+    </div>
+    <div class="row mt-3">
+        <div class="col" >
+            <input type="email" placeholder="Email" class="form-control">
+        </div>
+        <div class="col">
+            <input type="password" id="pass" placeholder="Password" class="form-control">
+        </div>
+    </div>
+</div>
+    </form>
+<!---floating forms--->
+    <br><br>
+    <form action="" class="bg-warning p-5 m-4 ">
+        <div class="form-floating mb-3 mt-3 ">
+            <input type="text" id="full" class="form-control" placeholder="Fullname">
+        <label for="full" class="form-label">Fullname:</label>
+        </div>
+        <div class="form-floating">
+            <input type="email"id="emaill" class="form-control" placeholder="email" >
+            <label for="emaill" class="form-label">Email</label>
+        </div>
+        <button type="submit" class="btn btn-success">Log in</button>
+
+
+    </form>
+</form>
+
+
+<br><br>
+<!---flex--->
+<div class="d-flex flex-column-reverse bg-danger p-3 m-3">
+    <div class="bg-primary p-3">phones</div>
+    <div class="bg-success p-3">Tablets</div>
+    <div class="bg-info p-3">pc</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
